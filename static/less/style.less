@@ -1,0 +1,2567 @@
+/** @format */
+
+// -------------------
+// Fonts
+// -------------------
+@fserif: Georgia, "Times New Roman", serif; // Font con grazie (corretto da "Georigia")
+@fsans: Arial, Verdana, Helvetica, sans-serif; // Font senza grazie (principale) (corretto da "arial")
+
+// -------------------
+// Font Sizes
+// -------------------
+@fsize-out: 20px;
+@fsize-inp: 20px;
+@fsize-help: 18px;
+@fsize-btn-close: 22px;
+@fsize-msg: 15px;
+@fsize-upload: 20px;
+@fsize-log: 14px;
+@fsize-menu: 14px;
+
+// -------------------
+// Variabili Comuni
+// -------------------
+@menu-width: 20vw;
+
+// ===================================================================
+//  THEME VARIABLES
+// ===================================================================
+
+// -------------------------------------------------------------------
+// TEMA: Dark
+// -------------------------------------------------------------------
+@dark-bg: #252525;
+@dark-text: #ffffff;
+@dark-color1: #e82323; // Arancione/Rosso
+@dark-color2: #00bd97; // Verde Acqua
+@dark-color3: #f6e602; // Giallo
+
+@dark-container-bg: lighten(@dark-bg, 10%);
+@dark-border-shadow: lighten(@dark-container-bg, 20%);
+@dark-btn-bg: lighten(@dark-container-bg, 10%);
+@dark-btn-hover: lighten(@dark-btn-bg, 15%);
+@dark-btn-color: darken(@dark-text, 10%);
+@dark-btn-hover-fg: lighten(@dark-color2, 10%);
+@dark-btn-copied: darken(@dark-color2, 20%);
+@dark-output-bg: darken(@dark-container-bg, 15%);
+@dark-input-bg: darken(@dark-container-bg, 15%);
+@dark-text-copied-bg: lighten(@dark-output-bg, 5%);
+@dark-text-copied: lighten(@dark-color2, 20%);
+@dark-btn-send0-bg: @dark-color1;
+@dark-btn-send0-hover-bg: lighten(@dark-color1, 10%);
+@dark-btn-send1-bg: @dark-color3;
+@dark-btn-send1-hover-bg: lighten(@dark-color3, 10%);
+
+@dark-btn-send2-bg: @dark-color2;
+@dark-btn-send2-hover-bg: lighten(@dark-color2, 10%);
+
+@dark-wnd-bg: lighten(@dark-bg, 5%);
+@dark-wnd-border-shadow: darken(@dark-color3, 10%);
+@dark-wnd-pre-color: lighten(@dark-color3, 30%);
+@dark-menu-bg: darken(@dark-container-bg, 35%);
+@dark-menu-border: lighten(@dark-menu-bg, 20%);
+@dark-menu-fg: @dark-text;
+@dark-menu-icon-fg: #aea7a7;
+@dark-menu-icon-hover: @dark-color1;
+@dark-label-btn-bg: darken(@dark-color2, 10%);
+@dark-delete-btn-bg: darken(@dark-color1, 10%);
+@dark-delete-btn-hover-bg: darken(@dark-color1, 20%);
+@dark-delete-btn-fg: #ffffff;
+@dark-delete-btn-hover-fg: #ffffff;
+@dark-btn-success-bg: darken(@dark-color2, 20%);
+@dark-btn-success-hover-bg: darken(@dark-color2, 15%);
+@dark-btn-danger-bg: @dark-color1;
+@dark-btn-danger-hover-bg: lighten(@dark-color1, 10%);
+
+// Variabili aggiuntive per tema dark
+@dark-dialog-bg: lighten(@dark-bg, 5%);
+@dark-dialog-text: @dark-text;
+@dark-kb-display-fg: #f6e602; // yellow
+
+// Variabili per upload
+@dark-file-list-item-success-bg: lighten(@dark-color2, 20%);
+@dark-file-list-item-success-fg: darken(@dark-color2, 30%);
+@dark-file-list-item-duplicate-bg: lighten(@dark-color3, 10%);
+@dark-file-list-item-duplicate-fg: darken(@dark-color3, 20%);
+@dark-file-list-item-error-bg: lighten(@dark-color1, 10%);
+@dark-file-list-item-error-fg: darken(@dark-color1, 20%);
+@dark-summary-bg: lighten(@dark-bg, 8%);
+@dark-summary-border: lighten(@dark-bg, 15%);
+@dark-summary-success-fg: @dark-color2;
+@dark-summary-duplicate-fg: @dark-color3;
+@dark-summary-error-fg: @dark-color1;
+@dark-progress-bg: #444;
+@dark-progress-bar-bg: @dark-color2;
+
+// -------------------------------------------------------------------
+// TEMA: Light (Refined Modern Look)
+// -------------------------------------------------------------------
+@light-bg: #f8fafc;
+@light-text: #1e293b;
+@light-color1: #ef4444; // Soft Red
+@light-color2: #10b981; // Emerald Green
+@light-color3: #f59e0b; // Amber
+
+@light-container-bg: #ffffff;
+@light-border-shadow: #e2e8f0;
+@light-btn-bg: #f1f5f9;
+@light-btn-hover: #e2e8f0;
+@light-btn-color: #334155;
+@light-btn-hover-fg: #0f172a;
+@light-btn-copied: #d1fae5;
+@light-output-bg: #ffffff;
+@light-input-bg: #ffffff;
+@light-text-copied-bg: #ecfdf5;
+@light-text-copied: #065f46;
+@light-btn-send0-bg: #3b82f6; // Professional Blue for Send
+@light-btn-send0-hover-bg: #2563eb;
+@light-btn-send1-bg: #ef4444;
+@light-btn-send1-hover-bg: #dc2626;
+@light-btn-send2-bg: #10b981;
+@light-btn-send2-hover-bg: #059669;
+@light-wnd-bg: #ffffff;
+@light-wnd-border-shadow: #cbd5e1;
+@light-wnd-pre-color: #334155;
+@light-menu-bg: #f8fafc;
+@light-menu-border: #e2e8f0;
+@light-menu-fg: #334155;
+@light-menu-icon-fg: #64748b;
+@light-menu-icon-hover: #3b82f6;
+@light-menu-box-bg: #ffffff;
+@light-menu-box-border: #e2e8f0;
+@light-menu-box-fg: #1e293b;
+@light-menu-icon-box-hover: #3b82f6;
+@light-border-box-shadow: #f1f5f9;
+@light-label-btn-bg: #64748b;
+@light-delete-btn-bg: #fee2e2;
+@light-delete-btn-hover-bg: #fecaca;
+@light-delete-btn-fg: #b91c1c;
+@light-delete-btn-hover-fg: #991b1b;
+@light-btn-success-bg: #10b981;
+@light-btn-success-hover-bg: #059669;
+@light-btn-danger-bg: #ef4444;
+@light-btn-danger-hover-bg: #dc2626;
+
+// Variabili aggiuntive per tema light
+@light-dialog-bg: darken(@light-bg, 1%);
+@light-dialog-text: @light-text;
+@light-kb-display-fg: #e65100; // dark orange for visibility
+
+// Variabili per upload
+@light-file-list-item-success-bg: lighten(@light-color2, 50%);
+@light-file-list-item-success-fg: darken(@light-color2, 20%);
+@light-file-list-item-duplicate-bg: lighten(@light-color3, 40%);
+@light-file-list-item-duplicate-fg: darken(@light-color3, 20%);
+@light-file-list-item-error-bg: lighten(@light-color1, 30%);
+@light-file-list-item-error-fg: darken(@light-color1, 20%);
+@light-summary-bg: lighten(@light-bg, -2%);
+@light-summary-border: lighten(@light-bg, -8%);
+@light-summary-success-fg: @light-color2;
+@light-summary-duplicate-fg: @light-color3;
+@light-summary-error-fg: @light-color1;
+@light-progress-bg: #e0e0e0;
+@light-progress-bar-bg: @light-color2;
+
+// ===================================================================
+//  3. STILI GLOBALI E RESET
+// ===================================================================
+* {
+  &:hover {
+    outline: none;
+    caret-color: transparent;
+  }
+}
+
+textarea:focus {
+  caret-color: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body,
+div,
+span,
+table,
+td,
+label,
+p,
+a,
+input,
+ul,
+li,
+button {
+  padding: 0;
+  margin: 0;
+  font-family: @fsans;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-weight: normal;
+  transition: none !important;
+}
+
+// ===================================================================
+//  4. LAYOUT PRINCIPALE
+// ===================================================================
+
+div.container {
+  position: relative;
+  top: 4.6vh;
+  left: 0;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow: hidden;
+
+  div.item {
+    min-height: 50px;
+  }
+
+  // --- Area Output ---
+  div.item1 {
+    flex: 1;
+    min-height: 0;
+    padding: 0.5vh 0.5vw 5vh 0.5vw;
+
+    .output-wrapper {
+      border-radius: 20px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      overflow: visible !important; // Essenziale per mostrare i tooltip tt-leftx
+      flex-direction: row;
+      align-items: flex-start;
+
+      .text-out {
+        box-sizing: border-box;
+        flex: 1;
+        border: none;
+        padding: 2px;
+        margin: 0;
+        min-width: 50vw;
+        height: 100%;
+        border-radius: 10px;
+        overflow-y: auto;
+        outline: none;
+
+        .pre-text,
+        .div-text {
+          box-sizing: border-box;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          font-family: @fsans;
+          font-size: @fsize-out;
+          line-height: 1.5;
+          padding: 2px;
+          margin: 0;
+          height: 100%;
+          overflow-y: auto;
+          scroll-behavior: smooth;
+        }
+        .div-text {
+          width: 100%;
+          overflow-x: hidden;
+          .user,
+          .assistant,
+          .system {
+            display: inline-block;
+            border-radius: 5px;
+            padding: 2px 5px;
+            margin: 5px 2px;
+            b {
+              font-weight: bold;
+              text-decoration: underline;
+              padding-bottom: 1px;
+            }
+          }
+          .user {
+            margin-right: 1vw;
+            width: 80%;
+          }
+          .assistant {
+            margin-right: 1vw;
+            text-align: left;
+            width: 100%;
+          }
+          .system {
+            margin-right: 1vw;
+            width: 100%;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+
+  // --- Area Input ---
+  div.item2 {
+    flex: 0 0 30vh;
+    padding: 0 0.5vw;
+
+    .input-wrapper {
+      border-radius: 20px;
+      position: relative;
+      bottom: 1vh;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .text-input {
+        box-sizing: border-box;
+        flex: 1;
+        font-size: @fsize-inp;
+        font-family: @fsans;
+        resize: none;
+        border: none;
+        padding: 2px 40px 2px 2px;
+        height: 100%;
+        margin-left: 5px;
+        border-radius: 10px;
+        overflow-y: auto;
+        outline: none;
+      }
+    }
+  }
+}
+
+// ===================================================================
+//  5. COMPONENTI UI
+// ===================================================================
+
+// -------------------
+// Menu Orizzontale Superiore
+// -------------------
+.menu-h {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4.5vh;
+  z-index: 100;
+
+  // .release {
+  //   font-size: @fsize-msg;
+  //   position: fixed;
+  //   top: 0.2vh;
+  //   right: 0.5vw;
+  //   height: 2vh;
+  //   margin-top: 0.8vh;
+  // }
+
+  .menu-btn {
+    appearance: none;
+    &:checked + .menu-icon .nav-icon {
+      background: transparent;
+      &::before { transform: rotate(45deg); top: 0; }
+      &::after { transform: rotate(-45deg); top: 0; }
+    }
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    left: 1.5vw;
+    top: 60%; // Ulteriormente abbassata
+    transform: translateY(-50%);
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 10;
+    
+    .nav-icon {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      position: relative;
+      transition: background 0.2s;
+      
+      &::before, &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        position: absolute;
+        transition: all 0.2s;
+      }
+      &::before { top: -7px; }
+      &::after { top: 7px; }
+    }
+  }
+
+  .menu-icon {
+    color: #aea7a7; // Colore di fallback (dark)
+    &:hover {
+      color: @dark-color1; // Hover di fallback
+    }
+  }
+
+  .head-wrapper {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 15px;
+
+    .active-doctype-display,
+    .active-model-display,
+    .help,
+    .upload,
+    .doctype-settings,
+    .provider-settings,
+    .log {
+      color: #ffffff;
+      margin: 2px 0;
+      padding: 2px 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      white-space: nowrap;
+      transition: all 0.2s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      }
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    .help { order: 1; }
+    .provider-settings { order: 2; margin-left: 10px; }
+    .active-model-display { 
+      order: 3; 
+      margin-left: 2px;
+      max-width: 65vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .log { 
+      order: 4; 
+      margin-left: auto;
+      margin-right: 60px;
+    }
+    
+    .btn-theme {
+      order: 5;
+    }
+    
+    .active-doctype-display, .upload, .doctype-settings, .active-kb-display {
+      display: none !important;
+    }
+  }
+}
+
+// -------------------
+// Menu Laterale a Scorrimento
+// -------------------
+.menu-box {
+  box-sizing: border-box;
+  position: fixed;
+  top: 5vh;
+  left: -2000px; // Nascosto di default
+  height: 95vh;
+  width: @menu-width;
+  transition: left 0.3s ease-out;
+  padding: 1vh 0.5vw;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  ul {
+    list-style: none;
+    li {
+      padding: 0;
+      margin: 4px 0 0 0;
+    }
+    li a {
+      font-family: @fsans;
+      text-decoration: none;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 20vw;
+      &:hover {
+        text-decoration: underline;
+      }
+      &.delete {
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+        border-radius: 5px;
+        color: #ffffff !important;
+      }
+      &.highlight-yellow {
+        background-color: #ffeb3b !important;
+        color: #000 !important;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        padding: 2px 5px;
+        display: block; /* Assicura che prenda larghezza se necessario */
+        &:hover {
+          background-color: darken(#ffeb3b, 10%) !important;
+          text-decoration: none;
+        }
+      }
+    }
+    li b {
+      font-family: @fsans;
+      text-align: left !important;
+      font-weight: bold;
+      font-style: italic;
+      color: #ffffff !important;
+      max-width: 20vw;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+// --- Logica apertura/chiusura menu ---
+.menu-open {
+  .container {
+    margin-left: @menu-width;
+  }
+  .menu-box {
+    left: 0 !important;
+  }
+}
+
+// -------------------text-
+// Pulsanti Azioni (Input/Output)
+// -------------------
+
+// Barra laterale verticale per input (destra input)
+.input-actions-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-left: 0.5vw;
+
+  .clear-input,
+  #btn-action3-continue-convo,
+  .btn-action3 {
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      background-color 0.3s,
+      transform 0.3s;
+    .icon,
+    .btn-icon-svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  // Colori originali tema dark
+  // Invia Request (VERDE)
+  .btn-action3,
+  #btn-action3-continue-convo {
+    background-color: @dark-btn-send2-bg; // Verde #00bd97
+    color: #ffffff;
+    &:hover {
+      background-color: @dark-btn-send2-hover-bg;
+    }
+  }
+  // Cancella Input (GRIGIO come originale)
+  .clear-input {
+    background-color: @dark-btn-bg;
+    color: @dark-btn-color;
+    .icon { fill: @dark-text; }
+    &:hover {
+      background-color: @dark-btn-hover;
+      .icon { fill: @dark-btn-hover-fg; }
+    }
+  }
+}
+
+// Barra laterale verticale per output (destra output)
+.output-actions-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5vw;
+  gap: 10px;
+  flex-shrink: 0; // Impedisce la compressione della barra
+
+  .copy-output,
+  .clear-history1,
+  .clear-history2 {
+    box-sizing: border-box;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition:
+      background-color 0.3s,
+      transform 0.3s;
+    .icon, .copy-icon {
+      width: 24px;
+      height: 24px;
+      display: block;
+      fill: #ffffff; // Icona bianca di default
+    }
+  }
+
+  .copy-output {
+    background-color: @dark-color2;
+    &:hover {
+      background-color: lighten(@dark-color2, 10%);
+    }
+  }
+
+  // Colori originali tema dark
+  // Cancella Conversazione (GIALLO)
+  .clear-history1 {
+    background-color: @dark-btn-send1-bg; // Giallo #f6e602
+    &:hover {
+      background-color: @dark-btn-send1-hover-bg;
+    }
+  }
+  // Cancella Conversazione & Contesto (ROSSO)
+  .clear-history2 {
+    background-color: @dark-btn-send0-bg; // Rosso #e82323
+    &:hover {
+      background-color: @dark-btn-send0-hover-bg;
+    }
+  }
+}
+
+// Colori per tema light
+.theme-light {
+  .input-actions-vertical {
+    .btn-action3,
+    #btn-action3-continue-convo {
+      background-color: @light-btn-send2-bg; // Verde
+      color: #ffffff;
+      &:hover {
+        background-color: @light-btn-send2-hover-bg;
+      }
+    }
+    .clear-input {
+      background-color: @light-btn-bg;
+      color: @light-btn-color;
+      .icon { fill: @light-text; }
+      &:hover {
+        background-color: @light-btn-hover;
+        .icon { fill: @light-btn-hover-fg; }
+      }
+    }
+  }
+
+  .output-actions-vertical {
+    .copy-output {
+      background-color: @light-btn-bg;
+      color: @light-btn-color;
+      .icon, .copy-icon { fill: @light-text; }
+      &:hover {
+        background-color: @light-btn-hover;
+        .icon, .copy-icon { fill: @light-btn-hover-fg; }
+      }
+    }
+    .clear-history1 {
+      background-color: @light-btn-send1-bg;
+      &:hover {
+        background-color: @light-btn-send1-hover-bg;
+      }
+    }
+    .clear-history2 {
+      background-color: @light-btn-send0-bg;
+      color: #ffffff;
+      &:hover {
+        background-color: @light-btn-send0-hover-bg;
+      }
+    }
+  }
+}
+
+// System Input Dialog Styles
+.payload-settings-dialog {
+  padding: 10px;
+  .desc {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  .payload-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .payload-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    label {
+      font-size: 0.9em;
+      font-weight: bold;
+      opacity: 0.9;
+    }
+  }
+  .payload-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    .btn-step {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      border: 1px solid currentColor;
+      background: rgba(128, 128, 128, 0.1);
+      color: inherit;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      
+      &:hover {
+        background: rgba(128, 128, 128, 0.2);
+        transform: scale(1.05);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+    
+    input[type="number"] {
+      flex-grow: 1;
+      height: 40px;
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      border-radius: 8px;
+      border: 1px solid currentColor;
+      background: transparent;
+      color: inherit;
+      /* Nascondi frecce standard */
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      -moz-appearance: textfield;
+    }
+  }
+}
+
+.system-input-dialog {
+  h4 {
+    margin-bottom: 10px;
+  }
+  
+  .system-prompt-desc {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-bottom: 15px;
+  }
+  
+  .system-prompt-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 200px;
+    background: inherit;
+    color: inherit;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+  }
+  
+  .system-prompt-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+}
+
+// System Input Dialog Buttons
+.btn-save {
+  background-color: @dark-btn-send2-bg; // Verde
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  &:hover {
+    background-color: @dark-btn-send2-hover-bg;
+  }
+}
+
+.btn-cancel {
+  background-color: @dark-btn-send0-bg; // Rosso
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  &:hover {
+    background-color: @dark-btn-send0-hover-bg;
+  }
+}
+
+.theme-light {
+  .btn-save {
+    background-color: @light-btn-send2-bg;
+    color: #ffffff;
+    &:hover {
+      background-color: @light-btn-send2-hover-bg;
+    }
+  }
+  .btn-cancel {
+    background-color: @light-btn-send0-bg;
+    color: #ffffff;
+    &:hover {
+      background-color: @light-btn-send0-hover-bg;
+    }
+  }
+}
+
+.input-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+
+  .clear-input,
+  #btn-action1-knowledge,
+  #btn-action2-start-convo,
+  #btn-action3-continue-convo {
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      background-color 0.3s,
+      transform 0.3s;
+    .icon,
+    .btn-icon-svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.output-actions {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5vw;
+  align-items: flex-end;
+
+  .copy-output,
+  .wnd-output,
+  .clear-output,
+  .clear-history,
+  .clear-history1,
+  .delete-kb-btn {
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    transition:
+      background-color 0.3s,
+      transform 0.3s;
+    .icon,
+    .copy-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .copy-output.copied {
+    transform: scale(1.2);
+  }
+}
+
+.input-actions {
+  .clear-input {
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+  }
+
+  #btn-action1-knowledge,
+  #btn-action2-start-convo,
+  #btn-action3-continue-convo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+    color: #ffffff; // Testo bianco per la maggior parte dei pulsanti
+  }
+
+  #btn-action3-continue-convo {
+    background-color: #81c784;
+    &:hover {
+      background-color: lighten(#81c784, 10%);
+    }
+  } // Verde
+}
+
+.clear-input {
+  &:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+}
+
+// -------------------
+// Pulsanti Tema (Sole/Luna)
+// -------------------
+.btn-theme {
+  position: fixed;
+  top: 0.2vh;
+  right: 1vw;
+  height: 4vh;
+  background: inherit;
+  z-index: 110;
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+// -------------------
+// Spinner di Caricamento
+// -------------------
+
+.spinner-bg {
+  visibility: hidden;
+}
+
+.spinner,
+#spinner-wait {
+  z-index: 10002;
+  position: absolute;
+  top: auto;
+  bottom: 41.5vh;
+  left: 30vw;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+
+  .pulse-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .stop-message {
+    margin-left: 15px;
+    padding: 9px 15px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    opacity: 1;
+    transition:
+      opacity 0.3s,
+      color 0.3s,
+      background-color 0.3s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#spinner-wait {
+  z-index: 10001;
+}
+
+.show-spinner,
+.show-spinner-wait {
+  display: flex !important;
+}
+
+@keyframes pulse-dark {
+  0% {
+    transform: scale(0.6);
+    box-shadow: 0 0 0 0 fade(@dark-color1, 70%);
+  }
+  70% {
+    transform: scale(1.4);
+    box-shadow: 0 0 0 20px fade(@dark-color1, 0%);
+  }
+  100% {
+    transform: scale(0.6);
+    box-shadow: 0 0 0 0 fade(@dark-color1, 0%);
+  }
+}
+
+@keyframes pulse-light {
+  0% {
+    transform: scale(0.6);
+    box-shadow: 0 0 0 0 fade(@light-color1, 70%);
+  }
+  70% {
+    transform: scale(1.4);
+    box-shadow: 0 0 0 20px fade(@light-color1, 0%);
+  }
+  100% {
+    transform: scale(0.6);
+    box-shadow: 0 0 0 0 fade(@light-color1, 0%);
+  }
+}
+
+.show-spinner {
+  display: flex;
+}
+
+// -------------------
+// Finestre Modali e Finestre di Info
+// -------------------
+.window-text,
+.window-info {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  overflow: auto;
+}
+
+.window-text {
+  box-sizing: border-box;
+  padding: 0 2px 2px 2px;
+  width: 78vw;
+  height: 94vh;
+
+  pre.pre-text,
+  div.div-text {
+    word-wrap: break-word;
+    font-family: @fserif;
+    font-size: @fsize-help;
+    padding: 2px;
+    margin: 0;
+  }
+  pre.pre-text {
+    white-space: pre-wrap;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+  }
+  div.text {
+    font-size: @fsize-help;
+    padding: 0 10px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    p {
+      text-align: justify;
+      padding-bottom: 9px;
+      padding-left: 5px;
+    }
+    .center {
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+      text-decoration: underline;
+    }
+    pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+  }
+}
+
+.window-info {
+  box-sizing: border-box;
+  padding: 5px;
+  // padding-top: 5px;
+  width: auto;
+  // min-width: 50vw;
+  max-width: 79vw;
+  .div-info {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+.btn-wrapper {
+  width: 100%;
+  height: 2vw;
+  position: sticky;
+  top: 0;
+  padding: 0;
+
+  .btn-copy,
+  .btn-close {
+    position: absolute;
+    top: 1px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-copy {
+    right: 5vw;
+    width: 30px;
+    padding: 0;
+    .copy-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .btn-close {
+    right: 2vw;
+    font-size: @fsize-btn-close;
+    font-weight: bold;
+  }
+}
+
+// -------------------
+// Componente Upload
+// -------------------
+.upload-dialog-content {
+  padding: 1px 5px 1px 5px;
+  text-align: center;
+  h4 {
+    padding: 0;
+    margin: 0;
+  }
+  .upload-description {
+    margin-bottom: 15px;
+    font-size: @fsize-upload;
+  }
+  .upload-mode-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    label {
+      margin: 0 15px;
+      cursor: pointer;
+      font-size: @fsize-menu;
+      input[type="radio"] {
+        margin-right: 8px;
+        transform: scale(1.2);
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  .drop-zone {
+    border: 3px dashed;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      border-color 0.3s;
+    margin-bottom: 1em;
+    p {
+      font-size: @fsize-upload;
+      margin: 0;
+    }
+  }
+  #progress-container {
+    margin-top: 20px;
+    div {
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 25px;
+    }
+    #progress-bar {
+      width: 0%;
+      height: 100%;
+      line-height: 25px;
+      color: white;
+      text-align: center;
+      transition: width 0.3s ease-in-out;
+      font-weight: bold;
+    }
+    #progress-text {
+      margin-top: 10px;
+      font-size: @fsize-menu;
+      font-weight: bold;
+    }
+  }
+  #file-list-container {
+    margin-top: 1em;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  .file-list-item {
+    padding: 8px 5px;
+    border-bottom: 1px solid;
+    animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  #upload-summary {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    strong {
+      font-size: @fsize-upload;
+      display: block;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    #summary-content {
+      div {
+        padding: 5px 0;
+        font-size: @fsize-menu;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      details {
+        margin-top: 10px;
+        cursor: pointer;
+        font-weight: normal;
+        summary {
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        ul {
+          list-style-type: disc;
+          margin-left: 20px;
+          padding-top: 5px;
+          li {
+            font-weight: normal;
+            font-size: @fsize-msg;
+            padding: 2px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.docs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em; // Ridotto da 1em
+}
+
+.select-all-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: @fsize-menu;
+  font-weight: bold;
+}
+
+#select-all-docs-checkbox {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.docs-footer {
+  margin-top: 1em;
+  text-align: center;
+}
+
+#delete-selected-docs-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+// -------------------
+// Dialogo Cancellazione Dati
+// -------------------
+.delete-dialog {
+  padding: 1em;
+  h4 {
+    text-align: center;
+    // margin-bottom: 1em;
+  }
+  .list-data {
+    margin-bottom: 1em;
+    li {
+      display: flex;
+      align-items: center;
+      label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        input[type="checkbox"] {
+          margin-right: 10px;
+          transform: scale(1.2);
+        }
+        b {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .delete-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; // Ridotto da 10px
+    button {
+      padding: 6px 12px; // Ridotto da 10px 20px
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      width: 80%; // Make buttons take up more width
+      max-width: 300px; // Limit max width
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#id_upload .window-text {
+  box-sizing: border-box;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+// -------------------
+// Tabelle
+// -------------------
+.table-data {
+  box-sizing: border-box;
+  width: 100%;
+  table-layout: auto;
+  border-collapse: separate; // Cambiato da collapse per gestire border-radius
+  border-spacing: 0; // Necessario per border-collapse: separate
+  margin: 1.5em auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid transparent; // Placeholder per il colore del bordo gestito dal tema
+
+  th,
+  td {
+    border: none;
+    border-bottom: 1px solid; // Solo linee orizzontali
+    padding: 4px 8px; // Ridotto da 12px 15px
+    text-align: left;
+    white-space: nowrap;
+
+    b {
+      font-weight: 600;
+      font-size: 0.9em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-style: normal;
+    }
+  }
+
+  th {
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-top: 8px; // Ridotto da 15px
+    padding-bottom: 8px; // Ridotto da 15px
+  }
+
+  tr:last-child td {
+    border-bottom: none; // Rimuovi bordo dall'ultima riga
+  }
+
+  .link-show-data,
+  .link-show-doc {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  td.size {
+    text-align: right;
+    font-family: monospace;
+    opacity: 0.8;
+  }
+
+  // Stili bottoni interni
+  button {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition:
+      background-color 0.2s,
+      transform 0.1s;
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+// -------------------
+// Liste Dati (simili a tabelle)
+// -------------------
+.list-data {
+  width: 100%;
+  margin: 1em auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  list-style: none; // Remove default bullet points
+  padding: 0; // Remove default padding
+
+  li {
+    border: 1px solid;
+    padding: 8px;
+    text-align: left;
+    border-top: none; // Collapse borders like table rows
+    &:first-child {
+      border-top: 1px solid; // Add top border for the first item
+    }
+  }
+}
+
+// -------------------
+// Selettori Provider e DocType
+// -------------------
+.provider-tree-container,
+.doctype-tree-container {
+  display: none;
+  position: absolute;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1001;
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.provider-tree-header,
+.doctype-tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.provider-tree-close-btn,
+.doctype-tree-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.provider-tree ul,
+.doctype-tree ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+// Stili specifici per Provider
+.provider-tree-container {
+  top: 6vh;
+  left: 180px;
+  .provider-node > span {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+  }
+  .model-list {
+    padding-left: 20px;
+    display: none; // Nascosto di default
+  }
+  .model-node {
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+}
+
+// Stili specifici per DocType
+.doctype-tree-container {
+  top: 6vh;
+  left: 15vw;
+  .doctype-node > span {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+    border-radius: 3px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .subdoctype-list {
+    padding-left: 30px;
+    display: block;
+  }
+  .subdoctype-node {
+    cursor: default;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+}
+
+// ===================================================================
+//  6. TEMPLATE DEGLI STILI
+// ===================================================================
+
+.apply-theme() {
+  background: @container-bg;
+  color: @text;
+
+  .spinner,
+  #spinner-wait {
+    .pulse-icon {
+      background-color: @color1;
+      animation: @pulse-animation 1.5s ease-in-out infinite;
+    }
+    .stop-message {
+      color: @spinner-stop-msg-fg;
+      background: @spinner-stop-msg-bg;
+      border: 2px solid @spinner-stop-msg-border;
+      &:hover {
+        border: 3px solid @spinner-stop-msg-hover-border;
+      }
+    }
+  }
+
+  // --- Layout ---
+  div.container {
+    background: @container-bg;
+    .item1 .output-wrapper {
+      flex-direction: row;
+      align-items: stretch;
+      
+      .text-out {
+        background: @output-bg;
+        color: @text;
+        box-shadow: 0 0 0 2px @border-shadow;
+        &:hover {
+          box-shadow: 0 0 0 2px @color2;
+        }
+        .div-text {
+          .user {
+            border: 2px solid @color2 !important;
+            b {
+              color: @color1;
+            }
+          }
+          .assistant {
+            border: 2px solid @color1 !important;
+            b {
+              color: @color2;
+            }
+          }
+          .system {
+            border: 2px dashed @color3 !important;
+            b {
+              color: @color3;
+            }
+          }
+        }
+      }
+    }
+    .item2 .input-wrapper .text-input {
+      background: @input-bg;
+      color: @text;
+      box-shadow: 0 0 0 2px @border-shadow;
+      &:hover {
+        box-shadow: 0 0 0 2px @color2;
+      }
+      &:focus {
+        box-shadow: 0 0 0 2px @color1;
+      }
+    }
+  }
+
+  // --- Menu ---
+  .menu-h {
+    background-color: @menu-h-bg;
+    box-shadow: 0 0 0 2px @border-shadow;
+    .release {
+      color: @text;
+    }
+    .menu-icon {
+      &:hover .nav-icon::before {
+        color: @menu-icon-hover;
+      }
+      .nav-icon::before {
+        color: @menu-icon-fg;
+      }
+    }
+    .head-wrapper {
+      .active-model-display,
+      .doctype-settings,
+      .upload {
+        color: @text;
+        background: transparent;
+        &:hover {
+          background: @btn-hover;
+        }
+      }
+      .provider-settings,
+      .help,
+      .log {
+        color: #ffffff;
+      }
+      .help { background: @color1; }
+      .provider-settings { background: @color2; }
+      .log { 
+        background: @color3; 
+        color: #000; // Testo nero sul giallo per contrasto
+      }
+      .active-model-display {
+        color: @active-model-fg;
+        &:hover { background: transparent; }
+      }
+      .upload .icon {
+        stroke: @text;
+      }
+      .log {
+        background: @log-bg !important;
+        color: @log-fg !important;
+        &:hover {
+          background: @log-hover-bg !important;
+        }
+        &.active {
+          background: @log-active-bg !important;
+          &:hover {
+            background: @log-active-hover-bg !important;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-box {
+    background: @menu-box-bg;
+    box-shadow: 0 0 0 2px @border-box-shadow;
+    ul {
+      border-top: 1px solid @menu-box-border;
+      li {
+        border: 1px solid @menu-box-border;
+        border-top: none;
+        b {
+          background: @label-btn-bg;
+          color: @delete-btn-fg;
+        }
+        a {
+          color: @menu-box-fg;
+          font-size: @fsize-menu;
+        }
+        &:hover {
+          background-color: lighten(@menu-bg, 25%);
+        }
+        a.delete,
+        a.help {
+          background: @delete-btn-bg;
+          color: @delete-btn-fg;
+          &:hover {
+            background: @delete-btn-hover-bg;
+            color: @delete-btn-hover-fg;
+          }
+        }
+      }
+    }
+  }
+
+  // --- Pulsanti ---
+  .input-actions .clear-history .icon {
+    fill: @text;
+  }
+  .clear-input {
+    color: @btn-color;
+    background: transparent;
+    &:hover {
+      color: @btn-hover-fg;
+    }
+  }
+  .output-actions {
+    .copy-output,
+    .wnd-output,
+    .clear-history,
+    .clear-output {
+      background-color: @btn-bg;
+      .icon,
+      .copy-icon {
+        fill: @text;
+      }
+      &:hover {
+        background-color: @btn-hover;
+        .icon,
+        .copy-icon {
+          fill: @btn-hover-fg;
+        }
+      }
+    }
+    .delete-kb-btn {
+      background: @delete-btn-bg;
+      .icon {
+        fill: #ffffff;
+      }
+      &:hover {
+        background: @delete-btn-hover-bg;
+      }
+    }
+    .clear-history {
+      background: @btn-send0-bg;
+      &:hover {
+        background: @btn-send0-hover-bg;
+      }
+    }
+    .clear-history1 {
+      background: @btn-send1-bg;
+      &:hover {
+        background: @btn-send1-hover-bg;
+      }
+    }
+    .copy-output.copied {
+      background: @btn-copied;
+    }
+  }
+  .input-actions {
+    #btn-action1-knowledge {
+      background: @btn-send0-bg;
+      &:hover {
+        background: @btn-send0-hover-bg;
+      }
+    }
+    #btn-action2-start-convo {
+      background: @btn-send1-bg;
+      &:hover {
+        background: @btn-send1-hover-bg;
+      }
+    }
+
+    .clear-input {
+      background-color: @btn-bg;
+      .icon {
+        fill: @text;
+      }
+      &:hover {
+        background-color: @btn-hover;
+        .icon {
+          fill: @btn-hover-fg;
+        }
+      }
+    }
+  }
+
+  // --- Finestre ---
+  .table-data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    
+    &.table-manage {
+      td.actions {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+      }
+    }
+
+    thead th {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 2px solid @border-shadow;
+      color: @color2;
+    }
+
+    tbody td {
+      padding: 8px;
+      border-bottom: 1px solid fade(@border-shadow, 30%);
+      vertical-align: middle;
+    }
+  }
+
+  .btn-table-action {
+    padding: 4px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: transform 0.1s, filter 0.2s;
+    
+    &:hover {
+      filter: brightness(1.2);
+      transform: scale(1.05);
+    }
+    
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &.btn-load {
+      background-color: @color2;
+      color: #000;
+    }
+
+    &.btn-delete {
+      background-color: @color1;
+      color: #fff;
+    }
+  }
+
+  .window-text,
+  .window-info {
+    background: @wnd-bg;
+    color: @text;
+    box-shadow: 0 0 0 2px @wnd-border-shadow;
+
+    .upload-dialog-content {
+      padding: 10px;
+      
+      .upload-description {
+        font-size: 14px;
+        margin-bottom: 15px;
+        color: @text;
+      }
+
+      .upload-mode-selector {
+        margin-bottom: 15px;
+        display: flex;
+        gap: 20px;
+        font-size: 13px;
+        label { cursor: pointer; display: flex; align-items: center; gap: 5px; }
+      }
+
+      .drop-zone {
+        border: 2px dashed @border-shadow;
+        border-radius: 8px;
+        padding: 40px 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        background: fade(@container-bg, 50%);
+        
+        &:hover, &.drag-over {
+          border-color: @color2;
+          background: fade(@color2, 10%);
+        }
+        
+        p { margin: 0; font-weight: bold; color: @color2; }
+      }
+    }
+
+    &.full-size {
+      display: flex;
+      flex-direction: column;
+      .div-info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .window-text {
+    pre.pre-text,
+    div.div-text {
+      color: @wnd-pre-color;
+    }
+    div.text .center {
+      color: @color3;
+    }
+  }
+  .btn-wrapper {
+    background: @wnd-btn-wrapper-bg;
+    .btn-copy {
+      background: inherit;
+      .copy-icon {
+        fill: @btn-color;
+        &:hover {
+          fill: @btn-hover-fg;
+          background: @wnd-btn-hover-bg;
+        }
+      }
+    }
+    .btn-close {
+      background-color: transparent;
+      color: @btn-color;
+      &:hover {
+        color: @btn-hover-fg;
+        background: @wnd-btn-hover-bg;
+      }
+    }
+  }
+  .window-info .div-info li {
+    border-bottom: 1px solid darken(@wnd-bg, 10%);
+  }
+
+  // --- Tabelle ---
+  .table-data {
+    th,
+    td {
+      border-color: @menu-border;
+      b {
+        background-color: @btn-success-bg;
+        color: #ffffff;
+      }
+    }
+    th {
+      background-color: @menu-h-bg;
+    }
+    .link-show-data,
+    .link-show-doc,
+    a {
+      color: @table-link-fg;
+      &:hover {
+        color: @table-link-hover-fg;
+      }
+    }
+    .delete-doc-btn {
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 1px 2px;
+      font-weight: normal;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .btn-success,
+  .btn-danger {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1px 2px;
+    font-weight: normal;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .btn-success {
+    border-color: @btn-success-bg;
+    background-color: @btn-success-bg;
+    color: #ffffff;
+    &:hover {
+      background-color: @btn-success-hover-bg;
+      color: #ffffff;
+    }
+  }
+
+  .btn-danger {
+    border-color: @btn-danger-bg;
+    background-color: @btn-danger-bg;
+    color: #ffffff;
+    &:hover {
+      background-color: @btn-danger-hover-bg;
+    }
+  }
+
+  .table-data {
+    tr:nth-child(even) {
+      background-color: @table-tr-even-bg;
+    }
+    tr:hover {
+      background-color: @table-tr-hover-bg;
+    }
+  }
+
+  // --- Liste Dati (simili a tabelle) ---
+  .list-data {
+    li {
+      border-color: @menu-border;
+    }
+    li:first-child {
+      background-color: @menu-h-bg; // Apply header background color
+      font-weight: bold; // Make it bold like table headers
+    }
+    li:nth-child(even) {
+      background-color: @table-tr-even-bg;
+    }
+    li:hover {
+      background-color: @table-tr-hover-bg;
+    }
+  }
+
+  // --- Upload ---
+  .upload-dialog-content {
+    .upload-description {
+      color: @text;
+    }
+    .drop-zone {
+      border-color: @drop-zone-border;
+      p {
+        color: @drop-zone-fg;
+      }
+      &.drag-over {
+        background-color: @drop-zone-drag-over-bg;
+        border-color: @color2;
+      }
+    }
+    #progress-container {
+      div {
+        background-color: @progress-bg;
+      }
+      #progress-bar {
+        background-color: @progress-bar-bg;
+      }
+      #progress-text {
+        color: @text;
+      }
+    }
+    #file-list-container {
+      border-color: @file-list-border;
+    }
+    .file-list-item {
+      border-bottom-color: @file-list-item-border;
+      color: @text;
+      &.success {
+        background-color: @file-list-item-success-bg;
+        color: @file-list-item-success-fg;
+      }
+      &.duplicate {
+        background-color: @file-list-item-duplicate-bg;
+        color: @file-list-item-duplicate-fg;
+      }
+      &.error {
+        background-color: @file-list-item-error-bg;
+        color: @file-list-item-error-fg;
+      }
+    }
+    #upload-summary {
+      background-color: @summary-bg;
+      border: 1px solid @summary-border;
+      strong {
+        color: @text;
+      }
+      #summary-content {
+        .success {
+          color: @summary-success-fg;
+        }
+        .duplicate {
+          color: @summary-duplicate-fg;
+        }
+        .error {
+          color: @summary-error-fg;
+        }
+        details {
+          summary {
+            color: @text;
+          }
+          ul li {
+            color: @text;
+          }
+        }
+      }
+    }
+  }
+
+  // --- Dialogo Cancellazione Dati ---
+  .delete-dialog {
+    background-color: @dialog-bg;
+    color: @dialog-text;
+    h4 {
+      color: @text;
+    }
+    .list-data {
+      li {
+        label {
+          color: @text;
+        }
+      }
+    }
+    .delete-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        padding: 5px 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.7em;
+        font-weight: bold;
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+        white-space: nowrap;
+      }
+
+      .btn-delete-selected {
+        background-color: darken(@color2, 15%);
+        color: #ffffff;
+        &:hover {
+          background-color: darken(@color2, 5%);
+          // color: @text;
+          text-decoration: underline;
+        }
+        margin-bottom: 10px;
+      }
+      .btn-delete-all {
+        background-color: @delete-btn-bg;
+        // color: @delete-btn-fg;
+        color: #ffffff;
+        &:hover {
+          background-color: @delete-btn-hover-bg;
+          // color: @delete-btn-hover-fg;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // --- Selettori Provider/DocType ---
+  .provider-tree-container,
+  .doctype-tree-container {
+    background-color: @tree-bg;
+    border: 2px solid @tree-border;
+  }
+  .provider-tree-header,
+  .doctype-tree-header {
+    color: @tree-header-fg;
+  }
+  .provider-tree-close-btn,
+  .doctype-tree-close-btn {
+    color: @tree-close-btn-fg;
+  }
+  .provider-tree .provider-node > span {
+    color: @tree-node-fg;
+    &.active {
+      color: @tree-node-active-fg;
+    }
+  }
+  .provider-tree .model-node {
+    color: @tree-model-node-fg;
+    &:hover {
+      background-color: @tree-model-node-hover-bg;
+    }
+    &.active {
+      background-color: @tree-model-node-active-bg;
+      color: @tree-model-node-active-fg;
+    }
+  }
+  .doctype-tree .doctype-node > span {
+    color: @tree-doctype-node-fg;
+    &.active {
+      background-color: @tree-doctype-node-active-bg;
+      color: @tree-doctype-node-active-fg;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .doctype-tree .subdoctype-node {
+    color: @tree-subdoctype-node-fg;
+    &:hover {
+      background-color: @tree-subdoctype-node-hover-bg;
+      color: @tree-subdoctype-node-hover-fg;
+    }
+  }
+  .active-doctype-display {
+    // background: @active-doctype-bg;
+    // border-color:@active-doctype-border;
+    color: @active-doctype-fg;
+  }
+  .active-model-display {
+    // background: @active-model-bg;
+    // border-color:@active-model-border;
+    color: @active-model-fg;
+  }
+  .active-kb-display {
+    color: @kb-display-fg;
+  }
+}
+
+// ===================================================================
+//  7. APPLICAZIONE DEI TEMI
+// ===================================================================
+
+// -------------------
+// Tema DARK
+// -------------------
+.theme-dark {
+  // --- Mappatura Variabili Generiche ---
+  @pulse-animation: pulse-dark;
+  @bg: @dark-bg;
+  @log-bg: darken(@dark-color1, 20%);
+  @log-fg: @dark-text;
+  @log-hover-bg: darken(@dark-color1, 10%);
+  @log-active-bg: darken(@dark-color2, 20%);
+  @log-active-hover-bg: darken(@dark-color2, 10%);
+  @container-bg: @dark-container-bg;
+  @text: @dark-text;
+  @color1: @dark-color1;
+  @color2: @dark-color2;
+  @color3: @dark-color3;
+  @border-shadow: @dark-border-shadow;
+  @btn-bg: @dark-btn-bg;
+  @btn-hover: @dark-btn-hover;
+  @btn-color: @dark-btn-color;
+  @btn-hover-fg: @dark-btn-hover-fg;
+  @btn-copied: @dark-btn-copied;
+  @output-bg: @dark-output-bg;
+  @input-bg: @dark-input-bg;
+  @wnd-bg: @dark-wnd-bg;
+  @wnd-border-shadow: @dark-wnd-border-shadow;
+  @wnd-pre-color: @dark-wnd-pre-color;
+  @menu-h-bg: lighten(@dark-menu-bg, 10%);
+  @menu-bg: @dark-menu-bg;
+  @menu-border: @dark-menu-border;
+  @menu-fg: @dark-menu-fg;
+  @menu-icon-fg: @dark-menu-icon-fg;
+  @menu-icon-hover: @dark-menu-icon-hover;
+  @menu-box-bg: lighten(@dark-menu-bg, 5%);
+  @menu-box-border: @dark-menu-border;
+  @menu-box-fg: @dark-menu-fg;
+  @menu-icon-box-hover: @dark-menu-icon-hover;
+  @border-box-shadow: @dark-border-shadow;
+  @btn-send0-bg: @dark-btn-send0-bg;
+  @btn-send0-hover-bg: @dark-btn-send0-hover-bg;
+  @btn-send1-bg: @dark-btn-send1-bg;
+  @btn-send1-hover-bg: @dark-btn-send1-hover-bg;
+  @btn-send2-bg: @dark-btn-send2-bg;
+  @btn-send2-hover-bg: @dark-btn-send2-hover-bg;
+  @label-btn-bg: @dark-label-btn-bg;
+  @delete-btn-bg: @dark-delete-btn-bg;
+  @delete-btn-hover-bg: @dark-delete-btn-hover-bg;
+  @delete-btn-fg: @dark-delete-btn-fg;
+  @delete-btn-hover-fg: @dark-delete-btn-hover-fg;
+  @btn-success-bg: @dark-btn-success-bg;
+  @btn-success-hover-bg: @dark-btn-success-hover-bg;
+  @btn-danger-bg: @dark-btn-danger-bg;
+  @btn-danger-hover-bg: @dark-btn-danger-hover-bg;
+  @wnd-btn-wrapper-bg: lighten(@dark-wnd-bg, 5%);
+  @wnd-btn-hover-bg: lighten(@dark-wnd-bg, 15%);
+  @table-tr-even-bg: lighten(@dark-wnd-bg, 5%);
+  @table-tr-hover-bg: lighten(@dark-wnd-bg, 15%);
+  @spinner-stop-msg-fg: #e8f406;
+  @spinner-stop-msg-bg: #3e3e3e;
+  @spinner-stop-msg-border: #05cc80;
+  @spinner-stop-msg-hover-border: #fc0909;
+  @table-link-fg: #00f0ff; // Ciano Elettrico ad altissimo contrasto per il dark
+  @table-link-hover-fg: lighten(#00f0ff, 20%);
+  @table-delete-btn-fg: #ffffff;
+  @table-delete-btn-bg: #f30404fc;
+  @table-delete-btn-border: #8e0303fc;
+  @table-delete-btn-hover-bg: #e44c00;
+  @drop-zone-border: #888;
+  @drop-zone-fg: #888;
+  @drop-zone-drag-over-bg: lighten(@dark-container-bg, 10%);
+  @file-list-border: #444;
+  @file-list-item-border: #555;
+  @tree-bg: #2d2d2d;
+  @tree-border: #4caf50;
+  @file-list-item-success-bg: @dark-file-list-item-success-bg;
+  @file-list-item-success-fg: @dark-file-list-item-success-fg;
+  @file-list-item-duplicate-bg: @dark-file-list-item-duplicate-bg;
+  @file-list-item-duplicate-fg: @dark-file-list-item-duplicate-fg;
+  @file-list-item-error-bg: @dark-file-list-item-error-bg;
+  @file-list-item-error-fg: @dark-file-list-item-error-fg;
+  @summary-bg: @dark-summary-bg;
+  @summary-border: @dark-summary-border;
+  @summary-success-fg: @dark-summary-success-fg;
+  @summary-duplicate-fg: @dark-summary-duplicate-fg;
+  @summary-error-fg: @dark-summary-error-fg;
+  @progress-bg: @dark-progress-bg;
+  @progress-bar-bg: @dark-progress-bar-bg;
+  @tree-header-fg: #eee;
+  @tree-close-btn-fg: #ccc;
+  @tree-node-fg: #87ceeb;
+  @tree-node-active-fg: #4caf50;
+  @tree-model-node-fg: #ddd;
+  @tree-model-node-hover-bg: #444;
+  @tree-model-node-active-bg: #4caf50;
+  @tree-model-node-active-fg: white;
+  @tree-doctype-node-fg: #4caf50;
+  @tree-doctype-node-active-bg: #4caf50;
+  @tree-doctype-node-active-fg: white;
+  @tree-subdoctype-node-fg: #bbb;
+  @tree-subdoctype-node-hover-bg: #333;
+  @tree-subdoctype-node-hover-fg: #ddd;
+  // @active-doctype-bg: @dark-color2;
+  // @active-doctype-border: @dark-color2;
+  @active-doctype-fg: lighten(@dark-color2, 5%);
+  // @active-model-bg: @dark-color2;
+  // @active-model-border: @dark-color2;
+  @active-model-fg: lighten(@dark-color2, 5%);
+  @kb-display-fg: @dark-kb-display-fg;
+  @dialog-bg: lighten(@dark-bg, 10%);
+  @dialog-text: @dark-text;
+
+  // --- Applica Stili e Override ---
+  .apply-theme();
+
+  .menu-h .menu-icon {
+    color: @menu-icon-fg;
+    &:hover {
+      color: @menu-icon-hover;
+    }
+  }
+
+  .btn-theme .btn-light {    display: inline-block;
+  }
+  .btn-theme .btn-dark {
+    display: none;
+  }
+  .btn-theme .btn-light svg {
+    fill: none;
+    stroke: @dark-menu-fg;
+  }
+}
+
+// -------------------
+// Tema LIGHT
+// -------------------
+.theme-light {
+  // --- Mappatura Variabili Generiche ---
+  @pulse-animation: pulse-light;
+  @bg: @light-bg;
+  @log-bg: @light-color1;
+  @log-fg: @light-bg;
+  @log-hover-bg: lighten(@light-color1, 10%);
+  @log-active-bg: @light-color2;
+  @log-active-hover-bg: lighten(@light-color2, 10%);
+  @container-bg: @light-container-bg;
+  @text: @light-text;
+  @color1: @light-color1;
+  @color2: @light-color2;
+  @color3: @light-color3;
+  @border-shadow: @light-border-shadow;
+  @btn-bg: @light-btn-bg;
+  @btn-hover: @light-btn-hover;
+  @btn-color: @light-btn-color;
+  @btn-hover-fg: @light-btn-hover-fg;
+  @btn-copied: @light-btn-copied;
+  @output-bg: @light-output-bg;
+  @input-bg: @light-input-bg;
+  @wnd-bg: @light-wnd-bg;
+  @wnd-border-shadow: @light-wnd-border-shadow;
+  @wnd-pre-color: @light-wnd-pre-color;
+  @menu-h-bg: @light-menu-bg;
+  @menu-bg: @light-menu-bg;
+  @menu-border: @light-menu-border;
+  @menu-fg: @light-menu-fg;
+  @menu-icon-fg: @light-menu-icon-fg;
+  @menu-icon-hover: @light-menu-icon-hover;
+  @menu-box-bg: @light-menu-box-bg;
+  @menu-box-border: @light-menu-box-border;
+  @menu-box-fg: @light-menu-box-fg;
+  @menu-icon-box-hover: @light-menu-icon-box-hover;
+  @border-box-shadow: @light-border-box-shadow;
+  // Modifica per usare gli stessi colori del tema scuro per i pulsanti di invio
+  // @btn-send0-bg: @light-btn-send0-bg;
+  // @btn-send0-hover-bg: @light-btn-send0-hover-bg;
+  // @btn-send1-bg: @light-btn-send1-bg;
+  // @btn-send1-hover-bg: @light-btn-send1-hover-bg;
+  // @btn-send2-bg: @light-btn-send2-bg;
+  // @btn-send2-hover-bg: @light-btn-send2-hover-bg;
+  @btn-send0-bg: @dark-btn-send0-bg;
+  @btn-send0-hover-bg: @dark-btn-send0-hover-bg;
+  @btn-send1-bg: @dark-btn-send1-bg;
+  @btn-send1-hover-bg: @dark-btn-send1-hover-bg;
+  @btn-send2-bg: @dark-btn-send2-bg;
+  @btn-send2-hover-bg: @dark-btn-send2-hover-bg;
+  @label-btn-bg: @light-label-btn-bg;
+  @delete-btn-bg: @light-delete-btn-bg;
+  @delete-btn-hover-bg: @light-delete-btn-hover-bg;
+  @delete-btn-fg: @light-delete-btn-fg;
+  @delete-btn-hover-fg: @light-delete-btn-hover-fg;
+  @btn-success-bg: @light-btn-success-bg;
+  @btn-success-hover-bg: @light-btn-success-hover-bg;
+  @btn-danger-bg: @light-btn-danger-bg;
+  @btn-danger-hover-bg: @light-btn-danger-hover-bg;
+  @wnd-btn-wrapper-bg: #f8fafc;
+  @wnd-btn-hover-bg: #f1f5f9;
+  @table-tr-even-bg: #f8fafc;
+  @table-tr-hover-bg: #f1f5f9;
+  @spinner-stop-msg-fg: #1e293b;
+  @spinner-stop-msg-bg: #e2e8f0;
+  @spinner-stop-msg-border: #3b82f6;
+  @spinner-stop-msg-hover-border: #2563eb;
+  @table-link-fg: #3b82f6; // Professional Blue
+  @table-link-hover-fg: #2563eb;
+  @table-delete-btn-fg: #ffffff;
+  @table-delete-btn-bg: #ef4444;
+  @table-delete-btn-border: #dc2626;
+  @table-delete-btn-hover-bg: #b91c1c;
+  @drop-zone-border: #cbd5e1;
+  @drop-zone-fg: #64748b;
+  @drop-zone-drag-over-bg: #f1f5f9;
+  @file-list-border: #e2e8f0;
+  @file-list-item-border: #f1f5f9;
+  @tree-bg: #ffffff;
+  @tree-border: #3b82f6;
+  @file-list-item-success-bg: #d1fae5;
+  @file-list-item-success-fg: #065f46;
+  @file-list-item-duplicate-bg: #fef3c7;
+  @file-list-item-duplicate-fg: #92400e;
+  @file-list-item-error-bg: #fee2e2;
+  @file-list-item-error-fg: #b91c1c;
+  @summary-bg: #ffffff;
+  @summary-border: #e2e8f0;
+  @summary-success-fg: #10b981;
+  @summary-duplicate-fg: #f59e0b;
+  @summary-error-fg: #ef4444;
+  @progress-bg: #f1f5f9;
+  @progress-bar-bg: #3b82f6;
+  @tree-header-fg: #1e293b;
+  @tree-close-btn-fg: #64748b;
+  @tree-node-fg: #3b82f6;
+  @tree-node-active-fg: #2563eb;
+  @tree-model-node-fg: #334155;
+  @tree-model-node-hover-bg: #f1f5f9;
+  @tree-model-node-active-bg: #3b82f6;
+  @tree-model-node-active-fg: white;
+  @tree-doctype-node-fg: #10b981;
+  @tree-doctype-node-active-bg: #10b981;
+  @tree-doctype-node-active-fg: white;
+  @tree-subdoctype-node-fg: #64748b;
+  @tree-subdoctype-node-hover-bg: #f8fafc;
+  @tree-subdoctype-node-hover-fg: #1e293b;
+  @active-doctype-fg: #10b981;
+  @active-model-fg: #3b82f6;
+  @kb-display-fg: #f59e0b;
+  @dialog-bg: #ffffff;
+  @dialog-text: #1e293b;
+
+  // --- Applica Stili e Override ---
+  .apply-theme();
+
+  .menu-h .menu-icon {
+    color: @menu-icon-fg;
+    &:hover {
+      color: @menu-icon-hover;
+    }
+  }
+
+  .btn-theme .btn-dark {    display: inline-block;
+  }
+  .btn-theme .btn-light {
+    display: none;
+  }
+  .btn-theme .btn-dark svg {
+    stroke: @light-text;
+    fill: none;
+  }
+}
+
+// -------------------
+// Phase Button SVG Icons
+// -------------------
+.btn-icon-svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+  fill: currentColor;
+}
