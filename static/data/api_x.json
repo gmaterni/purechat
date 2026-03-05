@@ -6,11 +6,6 @@
             "exported_key": "ragindex",
             "keys": [
                 {
-                    "name": "ragtext",
-                    "key": "mLEAxPmlYry9bsBWYDj-XldkNaq3ZedzHx7_4Qo",
-                    "notes": "giuseppe.materni"
-                },
-                {
                     "name": "ragindex",
                     "key": "mLEAxPmP4kiTbJpVqu6W7V_PU19bJif-knhK8jm",
                     "notes": "giuseppe.materni"
@@ -53,11 +48,6 @@
             "api_key_env": "MISTRAL_API_KEY",
             "exported_key": "mst1",
             "keys": [
-                {
-                    "name": "mst1",
-                    "key": "lA2hqHNP94d89FIqkR2el90f6SKGwXVc",
-                    "notes": "giuseppe.materni"
-                },
                 {
                     "name": "ua260203",
                     "key": "H8VTkiSG9zV7qaZ8UFrYC3L4nIuKPFsc",
